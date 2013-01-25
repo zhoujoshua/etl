@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="gb2312"?>
+<SNDA>
+  <confirm>ON</confirm>
+  <log>ON</log>
+  <delEmptyDir>ON</delEmptyDir>
+  <svrName>ABC</svrName>
+  <dataDir>d:\tmp</dataDir>
+  <columnNum>11</columnNum>
+  <dbsystem>
+    <database>
+      <type>tsql</type>
+      <ip>10.0.247.32</ip>
+      <port>1433</port>
+      <db>logdetail</db>
+      <user>etluser</user>
+      <password>Jsd23#2paP</password>
+      <sql>sp_query_beans</sql>
+      <parms>
+        <parm type="varchar" size="32" dir="in" name="start_time">start_time</parm>
+        <parm type="varchar" size="32" dir="in" name="end_time">end_time</parm>
+      </parms>
+      <file>SP_QUERY_BEANS</file>
+      <columnNum>3</columnNum>
+      <serial>1,2,3</serial>
+    </database>
+  </dbsystem>
+  <upload>
+    <ftp>
+      <ip>127.0.0.1</ip>
+      <port>1021</port>
+      <user>etl</user>
+      <pwd>etl</pwd>
+      <path>/</path>
+      <tryagain>3</tryagain>
+    </ftp>
+  </upload>
+</SNDA>
